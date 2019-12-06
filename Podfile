@@ -5,7 +5,9 @@ target 'Emplate' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Emplate
+  pod 'Alamofire', '~> 4.7'
+  pod 'ObjectMapper', '~> 3.4'
+  pod 'AlamofireObjectMapper', '~> 5.2'
 
   target 'EmplateTests' do
     inherit! :search_paths
