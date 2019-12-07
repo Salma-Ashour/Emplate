@@ -12,7 +12,6 @@ import ObjectMapper
 
 class Urls: Mappable {
     required init?(map: Map) {
-        
     }
     
     var original: String?

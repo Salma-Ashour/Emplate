@@ -12,8 +12,6 @@ protocol OfferView {
     func startLoading()
     func finishLoading()
     func setOffers(_ offers: [Offer])
-    func setEmptyOffers()
-    
 }
 
 class OfferPresenter {

@@ -12,7 +12,6 @@ import ObjectMapper
 
 class Thumbnail: Mappable {
     required init?(map: Map) {
-        
     }
     
     var type: String?

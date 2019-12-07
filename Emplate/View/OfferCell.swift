@@ -18,18 +18,6 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var priceBeforeLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func setupCell(offer: Offer) {
         self.offerName.text = offer.name
         self.offerExpiryDateLabel.text = offer.created_at
@@ -45,8 +33,5 @@ class OfferCell: UITableViewCell {
         if let discount = prices.discount {
             self.discountLabel.text = "Spar: " + discount
         }
-        
-        
-        
-}
+    }
 }

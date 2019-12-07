@@ -57,11 +57,5 @@ extension OffersViewController : OfferView {
         self.offers = offers
         tableView.reloadData()
     }
-    
-    func setEmptyOffers() {
-    
-    }
-    
-    
 }
 
