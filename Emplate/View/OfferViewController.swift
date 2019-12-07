@@ -7,28 +7,24 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class OffersViewController: UIViewController {
     
     var offers: [Offer] = []
     fileprivate let offerPresenter = OfferPresenter(networkManager: NetworkManager())
     
+    @IBOutlet weak var indicatorView: NVActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.delegate = self
         tableView.dataSource = self
-        
+        indicatorView.type = .circleStrokeSpin
         offerPresenter.attachView(self)
         offerPresenter.getOffers()
         }
-}
-
-extension OffersViewController: UITableViewDelegate {
-    
-    
 }
 
 extension OffersViewController: UITableViewDataSource {
@@ -38,7 +34,7 @@ extension OffersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferCell") as! OfferCell
-        cell.offerName.text = offers[indexPath.row].name
+        cell.setupCell(offer: offers[indexPath.row])
         return cell
     }
     
@@ -50,11 +46,11 @@ extension OffersViewController: UITableViewDataSource {
 
 extension OffersViewController : OfferView {
     func startLoading() {
-        
+        indicatorView.startAnimating()
     }
     
     func finishLoading() {
-        
+        indicatorView.stopAnimating()
     }
     
     func setOffers(_ offers: [Offer]) {

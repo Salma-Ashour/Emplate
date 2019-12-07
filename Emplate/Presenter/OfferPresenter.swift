@@ -30,11 +30,12 @@ class OfferPresenter {
     
     
     func getOffers(){
+        self.offerView?.startLoading()
         networkManager.getOffers{ [weak self] offers in
             if let offers  = offers {
                 self?.offerView?.setOffers(offers)
             }
-            
+            self?.offerView?.finishLoading()
         }
     }
 }

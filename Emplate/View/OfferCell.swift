@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OfferCell: UITableViewCell {
     
@@ -24,6 +25,13 @@ class OfferCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCell(offer: Offer) {
+        self.offerName.text = offer.name
+        self.offerExpiryDateLabel.text = offer.created_at
+        let url = URL(string: offer.thumbnail?.urls?.mobile ?? "")
+        offerImage.kf.setImage(with: url)
     }
 
 }

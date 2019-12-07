@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,10 +40,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_4_solid.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="v2J-kV-iZl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2J-kV-iZl">
                                                     <rect key="frame" x="0.0" y="48" width="375" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="v6n-py-AYY"/>
+                                                        <constraint firstAttribute="height" constant="300" id="v6n-py-AYY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sneaker offer!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-Il-530">
@@ -117,17 +117,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-XX-9Hb" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4a3-Pu-tch"/>
+                                    <constraint firstAttribute="width" constant="100" id="NuZ-GZ-bad"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="z4Z-XX-9Hb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1UU-UM-JcX"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4nC-ml-MGE"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DAe-eg-LbD"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MrS-Oo-rRc"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8N-fA-Wgz"/>
+                            <constraint firstItem="z4Z-XX-9Hb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeo-5E-Fyi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="z4Z-XX-9Hb" id="pEI-6Y-g1B"/>
                         <outlet property="tableView" destination="JPo-Wf-bDz" id="FqZ-fa-Fai"/>
                     </connections>
                 </viewController>
@@ -136,7 +152,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="01_4_solid.jpeg" width="450" height="450"/>
-    </resources>
 </document>

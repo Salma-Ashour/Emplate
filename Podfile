@@ -8,6 +8,8 @@ target 'Emplate' do
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.4'
   pod 'AlamofireObjectMapper', '~> 5.2'
+  pod 'NVActivityIndicatorView'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'EmplateTests' do
     inherit! :search_paths
