@@ -14,17 +14,24 @@ class OffersViewController: UIViewController {
     var offers: [Offer] = []
     fileprivate let offerPresenter = OfferPresenter(networkManager: NetworkManager())
     
+    @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var indicatorView: NVActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        errorView.isHidden = true
         tableView.dataSource = self
         indicatorView.type = .circleStrokeSpin
         offerPresenter.attachView(self)
         offerPresenter.getOffers()
-        }
+    }
+    @IBAction func tryAgainButtonClicked(_ sender: Any) {
+        errorView.isHidden = true
+        offerPresenter.getOffers()
+    }
+    
 }
 
 extension OffersViewController: UITableViewDataSource {
@@ -55,7 +62,13 @@ extension OffersViewController : OfferView {
     
     func setOffers(_ offers: [Offer]) {
         self.offers = offers
+        tableView.isHidden = false
         tableView.reloadData()
+    }
+    
+    func showError() {
+        tableView.isHidden = true
+        errorView.isHidden = false
     }
 }
 

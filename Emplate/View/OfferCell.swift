@@ -23,15 +23,20 @@ class OfferCell: UITableViewCell {
         self.offerExpiryDateLabel.text = offer.created_at
         let url = URL(string: offer.thumbnail?.urls?.mobile ?? "")
         offerImage.kf.setImage(with: url)
-        let prices = offer.postfields[0].getPrice()
-        if let price = prices.price {
-            self.priceLabel.text = "Pris: " + price
+        if offer.postperiods.count != 0 ,let date = Utils.getDateFormatted(dateString: offer.postperiods[0].stop ?? "") {
+            offerExpiryDateLabel.text = "Expires on " + date
         }
-        if let priceBefore = prices.priceBefore {
-            self.priceBeforeLabel.text = "For: " + priceBefore
-        }
-        if let discount = prices.discount {
-            self.discountLabel.text = "Spar: " + discount
+        if offer.postfields.count != 0 {
+            let prices = offer.postfields[0].getPrice()
+            if let price = prices.price {
+                self.priceLabel.text = "Pris: " + price
+            }
+            if let priceBefore = prices.priceBefore {
+                self.priceBeforeLabel.text = "For: " + priceBefore
+            }
+            if let discount = prices.discount {
+                self.discountLabel.text = "Spar: " + discount
+            }
         }
     }
 }

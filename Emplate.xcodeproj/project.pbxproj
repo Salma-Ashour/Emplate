@@ -30,6 +30,9 @@
 		4CD0EEBA239BEDDF00AE7A2F /* PostPeriodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEB9239BEDDF00AE7A2F /* PostPeriodTest.swift */; };
 		4CD0EEBC239BEE8000AE7A2F /* PostFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEBB239BEE8000AE7A2F /* PostFieldTest.swift */; };
 		4CD0EEBE239BEEE600AE7A2F /* OfferTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEBD239BEEE600AE7A2F /* OfferTest.swift */; };
+		4CD0EEC2239C550700AE7A2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEC1239C550700AE7A2F /* Utils.swift */; };
+		4CD0EEC4239C5F5200AE7A2F /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEC3239C5F5200AE7A2F /* UtilsTest.swift */; };
+		4CD0EEC6239C651000AE7A2F /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD0EEC5239C651000AE7A2F /* NetworkManagerTest.swift */; };
 		AD142ABA868B16603148D500 /* Pods_EmplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AD14938340D886EE1363A7 /* Pods_EmplateTests.framework */; };
 		EB1AE1F50697852ECE1A3A12 /* Pods_Emplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D12A8C7A5E3CCF26B8DD41F /* Pods_Emplate.framework */; };
 /* End PBXBuildFile section */
@@ -50,8 +53,6 @@
 		4C10F18A2399490E00D60714 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		4C10F18C2399492E00D60714 /* Offer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Offer.storyboard; sourceTree = "<group>"; };
 		4C10F18F239949DF00D60714 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		4C10F191239949E300D60714 /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
-		4C10F192239949E500D60714 /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Medium.ttf"; sourceTree = "<group>"; };
 		4C10F19323994B3000D60714 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C1B86D2239945B200E2BB9B /* Emplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1B86D5239945B200E2BB9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +77,9 @@
 		4CD0EEB9239BEDDF00AE7A2F /* PostPeriodTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPeriodTest.swift; sourceTree = "<group>"; };
 		4CD0EEBB239BEE8000AE7A2F /* PostFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFieldTest.swift; sourceTree = "<group>"; };
 		4CD0EEBD239BEEE600AE7A2F /* OfferTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTest.swift; sourceTree = "<group>"; };
+		4CD0EEC1239C550700AE7A2F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4CD0EEC3239C5F5200AE7A2F /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		4CD0EEC5239C651000AE7A2F /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		7AF20036BBBDFD2FE226C7C8 /* Pods-EmplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmplateTests.release.xcconfig"; path = "Target Support Files/Pods-EmplateTests/Pods-EmplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D12A8C7A5E3CCF26B8DD41F /* Pods_Emplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AD14938340D886EE1363A7 /* Pods_EmplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +109,8 @@
 		4C10F18E239949CB00D60714 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4C10F192239949E500D60714 /* SFUIText-Medium.ttf */,
-				4C10F191239949E300D60714 /* SF-UI-Display-Medium.otf */,
+				4CD0EEA5239A6E9800AE7A2F /* NetworkManager.swift */,
+				4CD0EEC1239C550700AE7A2F /* Utils.swift */,
 				4C10F18F239949DF00D60714 /* Fonts */,
 			);
 			path = Resources;
@@ -144,7 +148,6 @@
 				4C1B86DE239945B400E2BB9B /* Assets.xcassets */,
 				4C1B86E0239945B400E2BB9B /* LaunchScreen.storyboard */,
 				4C1B86E3239945B400E2BB9B /* Info.plist */,
-				4CD0EEA5239A6E9800AE7A2F /* NetworkManager.swift */,
 			);
 			path = Emplate;
 			sourceTree = "<group>";
@@ -160,6 +163,8 @@
 				4CD0EEB9239BEDDF00AE7A2F /* PostPeriodTest.swift */,
 				4CD0EEBB239BEE8000AE7A2F /* PostFieldTest.swift */,
 				4CD0EEBD239BEEE600AE7A2F /* OfferTest.swift */,
+				4CD0EEC3239C5F5200AE7A2F /* UtilsTest.swift */,
+				4CD0EEC5239C651000AE7A2F /* NetworkManagerTest.swift */,
 			);
 			path = EmplateTests;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				4C1B86D6239945B200E2BB9B /* AppDelegate.swift in Sources */,
 				4C1B86D8239945B200E2BB9B /* SceneDelegate.swift in Sources */,
 				4CD0EEB0239A7AED00AE7A2F /* Urls.swift in Sources */,
+				4CD0EEC2239C550700AE7A2F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,8 +412,10 @@
 				4CD0EEBE239BEEE600AE7A2F /* OfferTest.swift in Sources */,
 				4C1B86ED239945B400E2BB9B /* EmplateTests.swift in Sources */,
 				4CD0EEB4239BE7F900AE7A2F /* OfferPresenterTest.swift in Sources */,
+				4CD0EEC4239C5F5200AE7A2F /* UtilsTest.swift in Sources */,
 				4CD0EEB8239BED3600AE7A2F /* ThumbnailTest.swift in Sources */,
 				4CD0EEB6239BEB3E00AE7A2F /* TestUrls.swift in Sources */,
+				4CD0EEC6239C651000AE7A2F /* NetworkManagerTest.swift in Sources */,
 				4CD0EEBC239BEE8000AE7A2F /* PostFieldTest.swift in Sources */,
 				4CD0EEBA239BEDDF00AE7A2F /* PostPeriodTest.swift in Sources */,
 			);

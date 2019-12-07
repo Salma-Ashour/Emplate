@@ -11,14 +11,13 @@ import ObjectMapper
 @testable import Emplate
 
 class NetworkMangagerMock: NetworkManager {
-    fileprivate let offers: [Offer]
-    init(offers: [Offer]) {
+    fileprivate let offers: [Offer]?
+    init(offers: [Offer]?) {
         self.offers = offers
     }
-    override func getOffers(handler callBack: @escaping ([Offer]) -> Void) {
+    override func getOffers(handler callBack: @escaping ([Offer]?) -> Void) {
         callBack(offers)
     }
-
 }
 
 class OfferViewMock : OfferView {
@@ -27,6 +26,7 @@ class OfferViewMock : OfferView {
     var setEmptyUsersCalled = false
     var startIndicator = false
     var stopIndicator = false
+    var errorHappened = false
     
     func startLoading() {
         startIndicator = true
@@ -38,6 +38,10 @@ class OfferViewMock : OfferView {
     
     func setOffers(_ offers: [Offer]) {
         setOffersCalled = true
+    }
+    
+    func showError() {
+         errorHappened = true
     }
 }
 
@@ -60,4 +64,17 @@ class OfferPresenterTest: XCTestCase {
         XCTAssertTrue(offerview.stopIndicator)
         XCTAssertTrue(offerview.setOffersCalled)
     }
+    
+    func testFailure() {
+        let networkManager = NetworkMangagerMock(offers: nil)
+        let offerview = OfferViewMock()
+        
+        let offerPresenter = OfferPresenter(networkManager: networkManager)
+        offerPresenter.attachView(offerview)
+        offerPresenter.getOffers()
+        XCTAssertTrue(offerview.errorHappened)
+    }
+    
+   
+    
 }

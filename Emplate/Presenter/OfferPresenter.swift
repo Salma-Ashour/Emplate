@@ -12,6 +12,7 @@ protocol OfferView {
     func startLoading()
     func finishLoading()
     func setOffers(_ offers: [Offer])
+    func showError()
 }
 
 class OfferPresenter {
@@ -26,12 +27,13 @@ class OfferPresenter {
         offerView = view
     }
     
-    
     func getOffers(){
         self.offerView?.startLoading()
         networkManager.getOffers{ [weak self] offers in
             if let offers  = offers {
                 self?.offerView?.setOffers(offers)
+            } else {
+                self?.offerView?.showError()
             }
             self?.offerView?.finishLoading()
         }

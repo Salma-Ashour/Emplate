@@ -133,6 +133,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-q8-qtS">
+                                <rect key="frame" x="93" y="269" width="189.5" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, An error occured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMu-u4-kWB">
+                                        <rect key="frame" x="8" y="8" width="173.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wuh-8U-23O">
+                                        <rect key="frame" x="57.5" y="48" width="74" height="33"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                        <state key="normal" title="Try again!"/>
+                                        <connections>
+                                            <action selector="tryAgainButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oH5-Nt-9zG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Wuh-8U-23O" firstAttribute="centerX" secondItem="6JR-q8-qtS" secondAttribute="centerX" id="7F9-h0-bhA"/>
+                                    <constraint firstItem="mMu-u4-kWB" firstAttribute="leading" secondItem="6JR-q8-qtS" secondAttribute="leading" constant="8" id="KXh-cr-DCS"/>
+                                    <constraint firstItem="Wuh-8U-23O" firstAttribute="top" secondItem="mMu-u4-kWB" secondAttribute="bottom" constant="20" id="XwN-IZ-fXy"/>
+                                    <constraint firstItem="Wuh-8U-23O" firstAttribute="centerY" secondItem="6JR-q8-qtS" secondAttribute="centerY" id="j0V-Q5-wNT"/>
+                                    <constraint firstAttribute="trailing" secondItem="mMu-u4-kWB" secondAttribute="trailing" constant="8" id="pXf-iC-TMc"/>
+                                    <constraint firstItem="mMu-u4-kWB" firstAttribute="top" secondItem="6JR-q8-qtS" secondAttribute="top" constant="8" id="u9d-4w-R9E"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -141,18 +169,21 @@
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DAe-eg-LbD"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MrS-Oo-rRc"/>
                             <constraint firstItem="JPo-Wf-bDz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T8N-fA-Wgz"/>
+                            <constraint firstItem="6JR-q8-qtS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wp3-1c-Q3D"/>
+                            <constraint firstItem="6JR-q8-qtS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aUn-B0-77k"/>
                             <constraint firstItem="z4Z-XX-9Hb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeo-5E-Fyi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="errorView" destination="6JR-q8-qtS" id="2NS-oP-5Il"/>
                         <outlet property="indicatorView" destination="z4Z-XX-9Hb" id="pEI-6Y-g1B"/>
                         <outlet property="tableView" destination="JPo-Wf-bDz" id="FqZ-fa-Fai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
+            <point key="canvasLocation" x="125.59999999999999" y="106.59670164917542"/>
         </scene>
     </scenes>
 </document>
