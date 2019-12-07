@@ -22,8 +22,8 @@ class PostField: Mappable {
     var content: String?
     var created_at: String?
     var updated_at: String?
-
-
+    
+    
     // Mappable
     func mapping(map: Map) {
         type      <- map["type"]
@@ -34,5 +34,25 @@ class PostField: Mappable {
         content  <- map["content"]
         created_at   <- map["created_at"]
         updated_at   <- map["updated_at"]
+    }
+    
+    func getPrice() -> (price: String?, priceBefore: String?, discount: String?) {
+        if let content = self.content {
+            let data = Data(content.utf8)
+            do {
+                // make sure this JSON is in the format we expect
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    // try to read out a string array
+                    let price = json["price"] as? String
+                    let priceBefore = json["price_before"] as? String
+                    let discount = json["discount"] as? String
+                    return (price, priceBefore, discount)
+                }
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+                
+            }
+        }
+        return (nil, nil, nil)
     }
 }

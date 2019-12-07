@@ -14,6 +14,9 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var offerName: UILabel!
     @IBOutlet weak var offerImage: UIImageView!
     @IBOutlet weak var offerExpiryDateLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var priceBeforeLabel: UILabel!
+    @IBOutlet weak var discountLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -32,6 +35,18 @@ class OfferCell: UITableViewCell {
         self.offerExpiryDateLabel.text = offer.created_at
         let url = URL(string: offer.thumbnail?.urls?.mobile ?? "")
         offerImage.kf.setImage(with: url)
-    }
-
+        let prices = offer.postfields[0].getPrice()
+        if let price = prices.price {
+            self.priceLabel.text = "Pris: " + price
+        }
+        if let priceBefore = prices.priceBefore {
+            self.priceBeforeLabel.text = "For: " + priceBefore
+        }
+        if let discount = prices.discount {
+            self.discountLabel.text = "Spar: " + discount
+        }
+        
+        
+        
+}
 }

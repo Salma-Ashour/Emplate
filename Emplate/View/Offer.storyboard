@@ -27,57 +27,57 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OfferCell" rowHeight="472" id="RC7-JL-BNe" customClass="OfferCell" customModule="Emplate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="472"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OfferCell" id="RC7-JL-BNe" customClass="OfferCell" customModule="Emplate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="352"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RC7-JL-BNe" id="w5h-JX-g4M">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="472"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="352"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rezet Sneaker Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWo-td-EPF">
-                                                    <rect key="frame" x="123.5" y="16" width="128" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWo-td-EPF">
+                                                    <rect key="frame" x="187.5" y="16" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2J-kV-iZl">
-                                                    <rect key="frame" x="0.0" y="48" width="375" height="300"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2J-kV-iZl">
+                                                    <rect key="frame" x="0.0" y="32" width="375" height="250"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="v6n-py-AYY"/>
+                                                        <constraint firstAttribute="height" constant="250" id="v6n-py-AYY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sneaker offer!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-Il-530">
-                                                    <rect key="frame" x="16" y="364" width="112" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-Il-530">
+                                                    <rect key="frame" x="16" y="298" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spar: 60 kr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlI-cA-eEz">
-                                                    <rect key="frame" x="198" y="394" width="73" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlI-cA-eEz">
+                                                    <rect key="frame" x="48" y="306" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pris: 800 kr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-yW-mFK">
-                                                    <rect key="frame" x="16" y="394" width="77" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-yW-mFK">
+                                                    <rect key="frame" x="16" y="306" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires on 01/09/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfB-XF-ZDD">
-                                                    <rect key="frame" x="16" y="418" width="141" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfB-XF-ZDD">
+                                                    <rect key="frame" x="16" y="314" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="13"/>
                                                     <color key="textColor" red="0.69411764710000001" green="0.69019607839999997" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Før: 860 kr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-O3-VWI">
-                                                    <rect key="frame" x="109" y="394" width="73" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-O3-VWI">
+                                                    <rect key="frame" x="32" y="306" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="13"/>
                                                     <color key="textColor" red="0.69411764705882351" green="0.69019607843137254" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2X-a4-03i">
-                                                    <rect key="frame" x="0.0" y="464" width="375" height="8"/>
+                                                    <rect key="frame" x="0.0" y="344" width="375" height="8"/>
                                                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="8" id="1sc-1D-qlv"/>
@@ -110,9 +110,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="discountLabel" destination="UlI-cA-eEz" id="OcQ-91-KBV"/>
                                             <outlet property="offerExpiryDateLabel" destination="DfB-XF-ZDD" id="5oG-Ei-eqE"/>
                                             <outlet property="offerImage" destination="v2J-kV-iZl" id="Yef-EE-FtV"/>
                                             <outlet property="offerName" destination="KWo-td-EPF" id="hae-Bj-rd6"/>
+                                            <outlet property="priceBeforeLabel" destination="pCO-O3-VWI" id="o9u-qS-NPC"/>
+                                            <outlet property="priceLabel" destination="BzF-yW-mFK" id="pnB-Nk-BVz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
